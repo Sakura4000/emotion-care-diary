@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>心晴 · 情绪日记与自我关怀</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#f7f4ef;color:#25342f}.wrap{max-width:960px;margin:auto;padding:32px 20px}.hero{background:linear-gradient(135deg,#dff2e8,#efe8ff);border:1px solid #fff;border-radius:28px;padding:48px;box-shadow:0 18px 60px #385c4930}.tag{display:inline-block;background:#ffffffb8;padding:7px 12px;border-radius:99px;color:#557566;font-size:13px}.hero h1{font-size:clamp(36px,7vw,72px);line-height:1;margin:24px 0 16px}.hero p{max-width:620px;font-size:18px;line-height:1.7;color:#53625d}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}button{border:0;border-radius:14px;padding:13px 18px;font-size:15px;cursor:pointer}.primary{background:#253f35;color:white}.secondary{background:white;color:#25342f}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}.card{background:#fff;border-radius:20px;padding:22px;box-shadow:0 8px 30px #2d47340d}.icon{font-size:28px}.card h3{margin:16px 0 8px}.card p{color:#6a7772;line-height:1.6;margin:0}.checkin{margin-top:22px;background:#253f35;color:white;border-radius:24px;padding:28px}.moods{display:flex;gap:10px;flex-wrap:wrap}.mood{background:#ffffff18;color:white;font-size:24px}.hint{opacity:.7}.foot{text-align:center;color:#7d8984;font-size:13px;margin-top:26px}@media(max-width:700px){.hero{padding:30px 24px}.grid{grid-template-columns:1fr}.hero h1{font-size:44px}}
+</style>
+</head>
+<body><main class="wrap">
+<section class="hero"><span class="tag">🌿 给情绪一个被看见的地方</span><h1>今天，你还好吗？</h1><p>用一分钟记录此刻。心晴帮助你发现情绪背后的触发因素，并给出温柔、可执行的自我关怀建议。</p><div class="actions"><button class="primary" onclick="document.querySelector('.checkin').scrollIntoView({behavior:'smooth'})">开始记录</button><button class="secondary">查看情绪趋势</button></div></section>
+<section class="grid"><article class="card"><div class="icon">✍️</div><h3>轻量记录</h3><p>选择情绪、强度与触发事件，写一句也算完成。</p></article><article class="card"><div class="icon">🧭</div><h3>触发洞察</h3><p>从日记中整理高频场景，帮你更了解自己。</p></article><article class="card"><div class="icon">🎧</div><h3>即时关怀</h3><p>匹配呼吸练习、音乐、散步等低门槛方案。</p></article></section>
+<section class="checkin"><p class="hint">此刻的情绪</p><h2>选一个最接近的感受</h2><div class="moods"><button class="mood" onclick="pick(this)">😌</button><button class="mood" onclick="pick(this)">🙂</button><button class="mood" onclick="pick(this)">😐</button><button class="mood" onclick="pick(this)">😟</button><button class="mood" onclick="pick(this)">😣</button></div><p id="reply" class="hint">没有好坏，只要如实感受。</p></section>
+<p class="foot">心晴不是医疗服务。如有伤害自己或他人的念头，请立即联系当地紧急援助。</p></main>
+<script>function pick(b){document.querySelectorAll('.mood').forEach(x=>x.style.outline='none');b.style.outline='2px solid #b9e3ce';document.getElementById('reply').textContent='谢谢你告诉我。接下来，我们慢慢看见它。'}</script>
+</body></html>
